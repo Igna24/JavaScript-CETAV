@@ -1,39 +1,61 @@
-function factorializador(numero) {
-  if (numero < 0)
-    return -1;
-  if (numero == 0)
-    return 1;
-  else {
-    return (numero * factorializador(numero - 1));
+// ejercicio 1
+function parOdivisible(numero) {
+  if (numero % 3 == 0) {
+    return "El numero es divisible por tres"
   }
-}
-console.log(factorializador(5))
-
-
-
-function recursiva(num2){
-  let resultado = num2
-  if (num2 ==0 || num2 == 1)
-  return 1
-  for(let i = num2 - 1; i >= 1; i--){
-    resultado *= i  }
-    return resultado
-}
-console.log(recursiva(5))
-
-
-
-function parOimpar (num3){
-  if (num3 < 0){
-    num3 = Math.abs(num3)
+  if (numero % 5 == 0) {
+    return "El numero es divisible por cinco"
   }
-  if (num3 == 0){
-    return "si es par"
-  }
-  if (num3 == 1){
-    return "no es par"
+  if (numero % 2 == 0) {
+    return "El numero es par"
   } else {
-    return parOimpar(num3-2)
+    return "El numero es impar"
   }
 }
-console.log(parOimpar(4))
+console.log(parOdivisible(22))
+
+
+// ejercicio 2
+function sumarna(sumarN){
+  suma = sumarN*(sumarN + 1)/2
+  return suma
+}
+console.log(sumarna(5))
+
+//ejercicio 3
+function invertido (word){
+  let palabraInvertido = word.split('').reverse('').join('')
+  while (word <= 0){
+    word = word + palabraInvertido
+    word--
+  }
+  return palabraInvertido
+}
+console.log(invertido("hola"))
+
+//ejercicio 4
+function vocales(texto) {
+  
+  texto = texto.replace(/[aeou]/gi,'i')
+  return texto
+}
+console.log(vocales("rodrigo"))
+
+
+//ejercicio 5
+let palabra = "marin";
+
+function ordeAlfabetico(palabra){
+
+  let palabraArray = palabra.split("");
+  palabraArray.sort();
+  let cadenaOrdenada = palabraArray.join("")
+
+  return cadenaOrdenada;
+}
+
+let ordenadaAlfab = ordeAlfabetico(palabra)
+console.log(ordenadaAlfab)
+
+
+
