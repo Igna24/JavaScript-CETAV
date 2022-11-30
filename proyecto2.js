@@ -3,16 +3,16 @@
 
 let x = 10
 
-function piramede() {
+function cuadrado() {
   for (let i = 1; i <= x; ++i) {
     let resultado = ''
     for (let j = 10; j >= i; j--) {
       resultado += '* '
     }
-    for (let j = 1; j <= i; ++j) {
+    for (let x = 1; x <= i; ++x) {
       resultado += '# '
     }
     console.log(resultado)
   }
 }
-piramede()
+cuadrado()
