@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Calculadora</title>
+</head>
+
+<body>
+  <div class="orden card">
+    <label>Primer valor</label>
+    <textarea class="primerValor" placeholder="Ingrese un numero"></textarea>
+    <label>Segundo valor</label>
+    <textarea class="segundoValor" placeholder="Ingrese un numero"></textarea>
+    <div class="botones">
+      <div>
+        <button id="multiplicacion" type="button" class="btn-hover color-1"> Multiplicar </button>
+        <button id="dividicion" type="button" class="btn-hover color-6"> Dividir</button>
+      </div>
+      <div>
+        <button id="suma" type="button" class="btn-hover color-6"> Suma</button>
+        <button id="resta" type="button" class="btn-hover color-1">Resta</button>
+      </div>
+    </div>
+    <label>Resultado</label>
+    <textarea class="resultados" placeholder="Resultado"></textarea>
+  </div>
+  <script>
+    const multiplicacion = document.getElementById('multiplicacion');
+    const dividicion = document.querySelector('#dividicion');
+    const primerValor = document.querySelector('.primerValor');
+    const segundoValor = document.querySelector('.segundoValor');
+    const resultados = document.querySelector('.resultados');
+
+    multiplicacion.addEventListener('click', () => {
+      const valor1 = primerValor.value;
+      const valor2 = segundoValor.value;
+      resultados.textContent = Number(valor1) * Number(valor2);
+    });
+
+    dividicion.addEventListener('click', () => {
+      const valor1 = primerValor.value;
+      const valor2 = segundoValor.value;
+      resultados.textContent = Number(valor1) / Number(valor2);
+    });
+
+    suma.addEventListener('click', () => {
+      const valor1 = primerValor.value;
+      const valor2 = segundoValor.value;
+      resultados.textContent = Number(valor1) + Number(valor2);
+    });
+
+    resta.addEventListener('click', () => {
+      const valor1 = primerValor.value;
+      const valor2 = segundoValor.value;
+      resultados.textContent = Number(valor1) - Number(valor2);
+    });
+
+  </script>
+</body>
+
+</html>

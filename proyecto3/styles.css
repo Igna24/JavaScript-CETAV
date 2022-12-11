@@ -1,0 +1,113 @@
+.orden {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.botones {
+  display: flex;
+  margin: 10px 0 10px 0
+}
+
+.resultados {
+  border: 4px red solid;
+  border-radius: 15px;
+}
+
+.primerValor {
+  border: 4px blue solid;
+  border-radius: 15px;
+}
+
+.segundoValor {
+  border: 4px green solid;
+  border-radius: 15px;
+}
+
+.btn-hover {
+  width: 200px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+
+  border-radius: 50px;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+  background-position: 100% 0;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+  outline: none;
+}
+
+.btn-hover.color-1 {
+  background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+  box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+
+.btn-hover.color-6 {
+  background-image: linear-gradient(to right, #009245, #FCEE21, #00A8C5, #D9E021);
+  box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #060c21;
+  font-family: sans-serif;
+}
+
+.card {
+  position: relative;
+  width: 509px;
+  height: 558px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #060c21;
+}
+
+.card:before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  bottom: -2px;
+  right: -2px;
+  background: #fff;
+  z-index: -1;
+}
+
+.card:after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  bottom: -2px;
+  right: -2px;
+  background: #fff;
+  z-index: -2;
+  filter: blur(40px);
+}
+
+.card:before,
+.card:after {
+  background: linear-gradient(235deg, #89ff00, #060c21, #00bcd4);
+}
