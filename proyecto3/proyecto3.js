@@ -21,7 +21,7 @@ function dibujarX(distancia) {
   }
   return lineas
 }
-console.table(dibujarX(6))
+console.table(dibujarX(8))
 
 
 // Ejercicio 2:
